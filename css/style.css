@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'FontAwesomeRegular';
+  src: url('./fonts/fa-regular-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'FontAwesomeBrands';
+  src: url('./fonts/fa-brands-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'FontAwesomeSolid';
+  src: url('./fonts/fa-solid-900.ttf') format('truetype');
+}
+
+body {
+  margin: 20px 0;
+  background: #2C3E50!important;
+}
+
+.navBar{
+  padding-top: 3rem;
+}
+
+.gameScore{
+  color: #e8eb93;
+}
+
+.grid {
+  padding-top: 4rem; 
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  position: relative;
+  background-color: #FC4349;
+  border: 4px solid #d7dadb;
+  border-radius: 5px;
+}
+
+.front:before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  font-size: 6rem;
+  content: "\f059";
+  color:#D7DADB;
+  text-align: center;
+  display: block;
+  width:140px;
+
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #FC4349;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 4px solid #d7dadb;
+  border-radius: 5px;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+.score{
+  color: #FC4349!important;
+}
+
+.match {
+  position: relative!important;
+  background-color: #6DBCDB!important;
+  border: 4px solid #d7dadb!important;
+  border-radius: 5px!important;
+}
+
+.match:before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  font-size: 6rem;
+  background: #6DBCDB !important;
+  content: "\f00c"!important;
+  color:#D7DADB;
+  text-align: center;
+  display: block;
+  width:140px;
+}
+
+.displayNone{
+  display: none!important;
+}
+
+.disable{
+  pointer-events: none;
+}
